@@ -3,7 +3,7 @@ import './button.css';
 
 
 
-const Mainbutton = ({btn_txt, color, backgroundColor, OnClick, txt_decoration, width, height}) => 
+const MainButton = ({btn_txt, color, backgroundColor, OnClick, txt_decoration, width, height}) => 
 
 
 <div
@@ -23,7 +23,7 @@ function ButtonClick() {
 }
 
 
-Mainbutton.defaultProps = {
+MainButton.defaultProps = {
     btn_txt:"This is a default button!",
     color:"white",
     backgroundColor:"#fc7753",
@@ -31,4 +31,4 @@ Mainbutton.defaultProps = {
     OnClick:ButtonClick,
 }
 
-export default Mainbutton;
+export default MainButton;
