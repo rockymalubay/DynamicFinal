@@ -10,6 +10,22 @@ import Input from '../../comps/Input';
 import './hotline.css';
 import {FiPhoneCall} from 'react-icons/fi';
 import {FaHeadset} from 'react-icons/fa';
+import Menu from '../../comps/Menu';
+
+var menu_state = false;
+
+function MenuToggle() {
+    if(menu_state == false){
+        menu_state = true;
+        document.querySelector(".menu_box").style.display = "block"
+    }else {
+        if(menu_state == true){
+            menu_state = false;
+            document.querySelector(".menu_box").style.display = "none"
+        }
+    }
+    
+}
 
 export default() => {
     return(
@@ -63,9 +79,12 @@ export default() => {
             <div className="sendButton">
                 <ArrowButton  text="Send"/>
             </div>
-            <div className="menuButton">
+            <div className="menuButton" onClick={MenuToggle}>
                 <MenuButton/>
             </div>
+            <div>
+                    <Menu />
+                </div>
         </div>
     )
 }

@@ -4,20 +4,50 @@ import InfoIcon from '../../comps/Icons';
 import MainButton from '../../comps/buttons';
 import TextComp from '../TextComp';
 import MenuButton from '../../comps/MenuButton';
+import Menu from '../../comps/Menu';
+import Router from 'next/router';
 
 const BulimiaPage = () => {
+
+    function MenuToggle() {
+        if(menu_state == false){
+            menu_state = true;
+            document.querySelector(".menu_box").style.display = "block"
+        }else {
+            if(menu_state == true){
+                menu_state = false;
+                document.querySelector(".menu_box").style.display = "none"
+            }
+        }
+        
+    }
+    
+    function helplineButton() {
+    
+            Router.push("/HotlinePage");
+    }
+
+    function anorexiaButton() {
+    
+        Router.push("/AboutPage_Anorexia");
+}
+
+    function bingeButton() {
+    
+        Router.push("/AboutPage_Binge");
+}
 
     return <div className="pageContainer_about"> 
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 
+
         <MainButton 
         btn_txt="Anorexia"
         color="#22B573"
         backgroundColor="white"
         txt_decoration="none"
-        
-        > </MainButton>
+        /> 
 
 
         <br></br>
@@ -47,10 +77,10 @@ const BulimiaPage = () => {
                 <InfoIcon> </InfoIcon>
                 
         </div>
-        <div className="btn_pos">
+        <div className="btn_pos" onClick={helplineButton}>
        <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
        </div>
-       <div className="menu_pos"><MenuButton></MenuButton></div>
+       <div className="menu_pos"  onClick={MenuToggle}><MenuButton></MenuButton></div>
     </div>
 
 

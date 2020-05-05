@@ -18,9 +18,6 @@ className="main_btn" >
 
 </div>;
 
-function ButtonClick() {
-    alert("")
-}
 
 
 MainButton.defaultProps = {
@@ -28,7 +25,7 @@ MainButton.defaultProps = {
     color:"white",
     backgroundColor:"#fc7753",
     txt_decoration:"Underline",
-    OnClick:ButtonClick,
+    OnClick:{},
 }
 
 export default MainButton;

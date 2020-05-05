@@ -7,7 +7,7 @@ const MenuButton = ({img}) =>
 <div>
     <div className="outer_circle">
         <div className="inner_circle">    
-            <img className="icon" src= {img}/>
+            <img className="icon" src= {menuIcon}/>
         </div>
     </div>
 </div>
