@@ -1,6 +1,6 @@
-import React from './node_modules/react';
+import React from 'react';
 import './icon.css';
-import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, } from './node_modules/react-icons/fa';
+import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, } from 'react-icons/fa';
 
 
 const InfoIcon = ({ width, height, color, text}) =>
