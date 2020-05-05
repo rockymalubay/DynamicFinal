@@ -1,6 +1,6 @@
 import React from 'react';
-import ArrowButton from '../../../Comps/buttons/ArrowButton/index';
-import MenuButton from '../../../Comps/MenuButton';
+import ArrowButton from '../../../comps/buttons/ArrowButton/index';
+import MenuButton from '../../../comps/MenuButton';
 import './questionButtons.css';
 
 const QuestionButtons = ({text}) => {
