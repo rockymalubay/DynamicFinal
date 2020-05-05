@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import './menu_button.css';
 import menuIcon from './menuicon.svg';
 import exitIcon from './exiticon.svg';

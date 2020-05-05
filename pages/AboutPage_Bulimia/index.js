@@ -1,7 +1,7 @@
 import React from 'react';
 import './bulimia.css';
-import Infoicon from '../../comps/Icons';
-import Mainbutton from '../../comps/buttons';
+import InfoIcon from '../../comps/Icons';
+import MainButton from '../../comps/buttons';
 import TextComp from '../TextComp';
 import MenuButton from '../../comps/MenuButton';
 
@@ -11,30 +11,30 @@ const BulimiaPage = () => {
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 
-        <Mainbutton 
+        <MainButton 
         btn_txt="Anorexia"
         color="#22B573"
         backgroundColor="white"
         txt_decoration="none"
         
-        > </Mainbutton>
+        > </MainButton>
 
 
         <br></br>
-        <Mainbutton 
+        <MainButton 
         btn_txt="Bulimia"
         color="white"
         backgroundColor="#22B573"
         txt_decoration="none"
         
-        > </Mainbutton>
-        <Mainbutton 
+        > </MainButton>
+        <MainButton 
         btn_txt="Binge-eating"
         color="#22B573"
         backgroundColor="White"
         txt_decoration="none"
         
-        > </Mainbutton>
+        > </MainButton>
         </div>
 
         <div className="title_txt">
@@ -44,11 +44,11 @@ const BulimiaPage = () => {
         </div>
 
         <div className="icon-set">
-                <Infoicon> </Infoicon>
+                <InfoIcon> </InfoIcon>
                 
         </div>
         <div className="btn_pos">
-       <Mainbutton btn_txt="Click here to discover helplines" width="300px"></Mainbutton>  
+       <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
        </div>
        <div className="menu_pos"><MenuButton></MenuButton></div>
     </div>
