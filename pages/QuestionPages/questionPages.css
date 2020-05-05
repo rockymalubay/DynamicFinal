@@ -1,0 +1,61 @@
+.pageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid orange 1px;
+    width:414px;
+    height:896px;
+    margin: 0;
+    padding: 0;
+}
+
+.textComp{
+    margin-top: 150px;
+    margin-left: 90px;
+    margin-right: 90px;
+    height: 150px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: top;
+    text-align: center;
+}
+
+.answers{
+    margin-top: 20px;
+    height: 350px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuButton{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.arrowButtons{
+    display: inline-flex;
+    position: relative !important;
+    justify-content: space-between;
+    align-items: bottom;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rightArrow{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.leftArrow{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}

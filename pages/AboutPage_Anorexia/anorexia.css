@@ -1,0 +1,56 @@
+.pageContainer_about{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    border: solid orange 1px;
+    width:414px;
+    height:896px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#5da9e9 0%, rgba(93, 169, 233, 0.47) 100%);
+    ;
+
+}
+
+.icon_positioning {
+    position: relative;
+    left: 50px;
+}
+
+.layer1 {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.icon-set {
+    position: relative;
+    top: 2px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    place-items: 12px;
+    margin: 1px;
+}
+
+.btn_pos {
+    position: relative;
+    align-items: center;
+    left: 57px;
+    top: 120px;
+}
+
+.menu_pos {
+    position: relative;
+    left: 170px;
+    top: 130px;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "dynamicassessment3_milan-rocky-yunus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milanjot/DynamicAssessment3_Milan-Rocky-Yunus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milanjot/DynamicAssessment3_Milan-Rocky-Yunus/issues"
+  },
+  "homepage": "https://github.com/milanjot/DynamicAssessment3_Milan-Rocky-Yunus#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "ionic": "^3.0.0",
+    "next": "^9.3.5",
+    "next-images": "^1.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-router": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "storybook-react-router": "^1.0.8"
+  },
+  "description": ""
+}

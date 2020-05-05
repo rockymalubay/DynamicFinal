@@ -1,0 +1,44 @@
+.hotlineBox{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 400px;
+    margin-left: 30px;
+}
+
+.sendButton{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    right: 80px;
+    margin-bottom: 100px;
+}
+.inputComp{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotlineBox > div {
+    display: inline-flex;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 30px;
+}
+
+.callIcon{
+    color: #FC7753;
+    width: 40px;
+    height: 40px;
+    border: #FC7753 solid 2px;
+    border-radius: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#inputSize{
+    height: 50px !important;
+}
