@@ -1,9 +1,9 @@
 import React from 'react';
 import Router from 'next/router';
-import ArrowButton from '../../Comps/buttons/ArrowButton';
+import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
-import OptionsButton from '../../Comps/OptionsButton';
-import MenuButton from '../../Comps/MenuButton';
+import OptionsButton from '../../comps/OptionsButton';
+import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
 
 function PageTwo() {

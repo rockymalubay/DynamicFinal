@@ -1,9 +1,9 @@
 import React from 'react';
 import './bulimia.css';
-import Infoicon from '../../Comps/Icons';
-import Mainbutton from '../../Comps/buttons';
+import Infoicon from '../../comps/Icons';
+import Mainbutton from '../../comps/buttons';
 import TextComp from '../TextComp';
-import MenuButton from '../../Comps/MenuButton';
+import MenuButton from '../../comps/MenuButton';
 
 const BulimiaPage = () => {
 
