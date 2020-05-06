@@ -1,13 +1,13 @@
 import React from 'react';
 // import QuestionPage_1 from '../Pages/QuestionPages/QuestionPage_1';
-import AnorexiaPage from '../Pages/AboutPage_Anorexia';
-import QuestionPage_1 from '../Pages/QuestionPages/QuestionPage_1';
-import QuestionPage_2 from '../Pages/QuestionPages/QuestionPage_2';
-import QuestionPage_3 from '../Pages/QuestionPages/QuestionPage_3';
-import QuestionPage_4 from '../Pages/QuestionPages/QuestionPage_4';
-import HotlinePage from '../Pages/HotlinePage';
-import BingePage from '../Pages/AboutPage_Binge';
-import BulimiaPage from '../Pages/AboutPage_Bulimia';
+import AnorexiaPage from '../pages/AboutPage_Anorexia';
+import QuestionPage_1 from '../pages/QuestionPages/QuestionPage_1';
+import QuestionPage_2 from '../pages/QuestionPages/QuestionPage_2';
+import QuestionPage_3 from '../pages/QuestionPages/QuestionPage_3';
+import QuestionPage_4 from '../pages/QuestionPages/QuestionPage_4';
+import HotlinePage from '../pages/HotlinePage';
+import BingePage from '../pages/AboutPage_Binge';
+import BulimiaPage from '../pages/AboutPage_Bulimia';
 
 export default {
     title:"My Pages",

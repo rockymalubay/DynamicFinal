@@ -1,6 +1,6 @@
 import React from 'react';
-import './hotlineBar.css';
-
+import './hotlinebar.css';
+ 
 const HotlineBar = ({onClick}) =>
 <div className="hotline_bar"> 
     <div className="hotline_numbers">    

@@ -1,13 +1,13 @@
 import React from 'react';
-import OptionsButton from '../Comps/OptionsButton';
-import ArrowButton from '../Comps/buttons/ArrowButton';
-import Logo from '../Comps/Logo';
-import Menu from'../Comps/Menu';
-import MenuButton from '../Comps/MenuButton';
-import menuIcon from '../Comps/MenuButton/menuicon.svg';
-import exitIcon from '../Comps/MenuButton/exiticon.svg';
-import HotlineBar from '../Comps/HotlineBar';
-import QuestionButtons from '../Pages/QuestionPages/QuestionButtons';
+import OptionsButton from '../comps/OptionsButton';
+import ArrowButton from '../comps/buttons/ArrowButton';
+import Logo from '../comps/Logo';
+import Menu from'../comps/Menu';
+import MenuButton from '../comps/MenuButton';
+import menuIcon from '../comps/MenuButton/menuicon.svg';
+import exitIcon from '../comps/MenuButton/exiticon.svg';
+import HotlineBar from '../comps/HotlineBar';
+import QuestionButtons from '../pages/QuestionPages/QuestionButtons';
 
 export default {
     title:"My comps",

@@ -1,5 +1,5 @@
 import React from 'react';
-import Infoicon from '../Comps/Icons';
+import Infoicon from '../comps/Icons';
 
 
 export default {
