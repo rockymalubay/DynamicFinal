@@ -8,11 +8,17 @@ import QuestionPage_4 from '../pages/QuestionPages/QuestionPage_4';
 import HotlinePage from '../pages/HotlinePage';
 import BingePage from '../pages/AboutPage_Binge';
 import BulimiaPage from '../pages/AboutPage_Bulimia';
+import LandingPage from '../pages/LandingPage';
 
 export default {
     title:"My Pages",
     component:AnorexiaPage
 }
+
+export const MyLandingPage = () =>
+<div>
+    <LandingPage/>
+</div>
 
 export const AnorexiaAboutPage = () =>
 <div>

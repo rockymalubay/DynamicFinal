@@ -1,0 +1,13 @@
+.LandingpageContainer_about{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    border: solid orange 1px;
+    width:414px;
+    height:896px;
+    margin: 0;
+    padding: 0;
+    background: white
+    ;
+
+}
