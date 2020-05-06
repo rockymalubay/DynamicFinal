@@ -9,18 +9,20 @@ import Router from 'next/router';
 
 const BulimiaPage = () => {
 
-    function MenuToggle() {
-        if(menu_state == false){
-            menu_state = true;
-            document.querySelector(".menu_box").style.display = "block"
-        }else {
-            if(menu_state == true){
-                menu_state = false;
-                document.querySelector(".menu_box").style.display = "none"
-            }
+    var menu_state = false;
+
+function MenuToggle() {
+    if(menu_state == false){
+        menu_state = true;
+        document.querySelector(".menu_box").style.display = "block"
+    }else {
+        if(menu_state == true){
+            menu_state = false;
+            document.querySelector(".menu_box").style.display = "none"
         }
-        
     }
+    
+}
     
     function helplineButton() {
     
@@ -41,11 +43,11 @@ const BulimiaPage = () => {
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 
-        <div>
+        <div onClick={anorexiaButton}>
             <MainButton 
                 btn_txt="Anorexia"
-                color="white"
-                backgroundColor="#22B573"
+                color="#22B573"
+                backgroundColor="White"
                 txt_decoration="none"
                 width="125px"
             />
@@ -54,14 +56,14 @@ const BulimiaPage = () => {
         <div>
             <MainButton 
                 btn_txt="Bulimia"
-                color="#22B573"
-                backgroundColor="white"
+                color="white"
+                backgroundColor="#22B573"
                 txt_decoration="none"
                 width="125px"
             /> 
         </div>
 
-        <div>
+        <div onClick={bingeButton}>
             <MainButton 
                 btn_txt="Binge-eating"
                 color="#22B573"
@@ -86,6 +88,8 @@ const BulimiaPage = () => {
        <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
        </div>
        <div className="menu_pos"  onClick={MenuToggle}><MenuButton></MenuButton></div>
+
+       <Menu />
     </div>
 
 

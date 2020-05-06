@@ -14,6 +14,13 @@ function PageTwo() {
     }
 }
 
+function BackPage() {
+
+    if(confirm("Do you want to go back to the homepage?")){
+        Router.push("/LandingPage");
+    }
+};
+
 var menu_state = false;
 
 function MenuToggle() {
@@ -57,9 +64,8 @@ export default () => {
                 <MenuButton/>
             </div>
             <div className="arrowButtons">
-                <div className="leftArrow">
+                <div className="leftArrow" onClick={BackPage}>
                     <ArrowButton
-                    onClick={() => Router.back()}
                     text="🡠"
                     />
                 </div>

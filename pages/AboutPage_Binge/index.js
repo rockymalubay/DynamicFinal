@@ -43,17 +43,17 @@ function bulimiaButton() {
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 
-        <div>
+        <div onClick={anorexiaButton}>
             <MainButton 
                 btn_txt="Anorexia"
-                color="white"
-                backgroundColor="#22B573"
+                color="#22B573"
+                backgroundColor="white"
                 txt_decoration="none"
                 width="125px"
             />
         </div>
 
-        <div>
+        <div onClick={bulimiaButton}>
             <MainButton 
                 btn_txt="Bulimia"
                 color="#22B573"
@@ -66,8 +66,8 @@ function bulimiaButton() {
         <div>
             <MainButton 
                 btn_txt="Binge-eating"
-                color="#22B573"
-                backgroundColor="White"
+                color="white"
+                backgroundColor="#22B573"
                 txt_decoration="none" 
                 width="125px"
             /> 
@@ -89,6 +89,7 @@ function bulimiaButton() {
        <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
        </div>
        <div className="menu_pos" onClick={MenuToggle}><MenuButton></MenuButton></div>
+       <Menu />
     </div>
 
 
