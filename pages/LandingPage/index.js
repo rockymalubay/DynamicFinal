@@ -1,7 +1,18 @@
 import React from 'react';
+import Router from 'next/router';
 import './landingpg.css';
 import Logo from '../../comps/Logo';
 import MainButton from '../../comps/buttons';
+
+function testButton() {
+    Router.push("/QuestionPage_1");
+    
+    }
+
+    function hotlineButton() {
+        Router.push("/HotlinePage");
+        
+        }
 
 const LandingPage = () => {
     return <div className="LandingpageContainer_about"> 
@@ -10,7 +21,7 @@ const LandingPage = () => {
         
         </div>
         
-        <div className="button">
+        <div className="button" onClick={testButton}>
         <MainButton 
         btn_txt="Take the test"
         color="white"
@@ -20,7 +31,7 @@ const LandingPage = () => {
         height="60px" />
         </div>
         <br></br>
-        <div className="button">
+        <div className="button" onClick={hotlineButton}>
         <MainButton 
         btn_txt="Discover helplines"
         color="white"

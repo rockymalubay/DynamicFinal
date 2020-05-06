@@ -22,11 +22,16 @@ Router.push("/HotlinePage");
 
 }
 
+function homeButton() {
+    Router.push("/LandingPage");
+    
+    }
+
 const Menu = ({text, img}) => <div className="menu_box">
     <div className="logo_box"> <img src= {Logo}/></div>
 
         <div className="menu_list_box">
-            <div className="menu_item" > <img src = {homeIcon}/> <h2>Home</h2></div>
+            <div className="menu_item" onClick={homeButton}> <img src = {homeIcon}/> <h2>Home</h2></div>
             <div className="menu_item" onClick={testButton}> <img src = {testIcon}/> <h2>Test</h2> </div>
             <div className="menu_item" onClick={factButton}> <img src = {factIcon}/> <h2>Facts</h2> </div>
             <div className="menu_item" onClick={helpButton}> <img src = {helpIcon}/> <h2>Helplines</h2> </div>

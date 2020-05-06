@@ -34,7 +34,7 @@ function helplineButton() {
 
 function bulimiaButton() {
     
-    Router.push("/AboutPage_Anorexia");
+    Router.push("/AboutPage_Bulimia");
 }
 
 function bingeButton() {
@@ -59,7 +59,7 @@ function bingeButton() {
             />
         </div>
 
-        <div>
+        <div onClick={bulimiaButton}>
             <MainButton 
                 btn_txt="Bulimia"
                 color="#22B573"
@@ -69,7 +69,7 @@ function bingeButton() {
             /> 
         </div>
 
-        <div>
+        <div onClick={bingeButton}>
             <MainButton 
                 btn_txt="Binge-eating"
                 color="#22B573"
