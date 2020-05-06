@@ -10,22 +10,24 @@ const LandingPage = () => {
         
         </div>
         
-        <div>
+        <div className="button">
         <MainButton 
         btn_txt="Take the test"
         color="white"
-        backgroundColor="#22B573"
+        backgroundColor="Orange"
         txt_decoration="none"
-        width="225px" />
+        width="275px"
+        height="60px" />
         </div>
         <br></br>
-        <div>
+        <div className="button">
         <MainButton 
         btn_txt="Discover helplines"
         color="white"
         backgroundColor="#22B573"
         txt_decoration="none"
-        width="225px" />
+        width="275px"
+        height="60px" />
         </div>
 
 
