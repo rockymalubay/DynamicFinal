@@ -1,5 +1,5 @@
 import React from 'react';
-import './icon.css';
+import './binge_icon.css';
 import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, } from 'react-icons/fa';
 
 
@@ -22,12 +22,6 @@ className="icons">
             </div>
             <p className="icon_text"> {text="Anemia"} </p>
         </div>
-        <div className="iconBackground">
-            <div className="icon_pos"  > 
-            <FaHeart color="red" size="30" ></FaHeart>
-            </div>
-            <p className="icon_text"> {text="Heart problems, possible heart failure"} </p>
-    </div>
     </div>
     <br></br>
     <br></br>

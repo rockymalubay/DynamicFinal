@@ -1,6 +1,6 @@
 import React from 'react';
 import './bulimia.css';
-import InfoIcon from '../../comps/Icons/Anorexia_Icons';
+import InfoIcon from '../../comps/Icons/Bulimia_Icons';
 import MainButton from '../../comps/buttons';
 import TextComp from '../TextComp';
 import MenuButton from '../../comps/MenuButton';

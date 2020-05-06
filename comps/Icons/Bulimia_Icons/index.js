@@ -1,6 +1,6 @@
 import React from 'react';
-import './icon.css';
-import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, } from 'react-icons/fa';
+import './bulim_icon.css';
+import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, FaHeartBroken, FaClinicMedical, FaSadTear, FaCandyCane, FaTooth, FaTeethOpen } from 'react-icons/fa';
 
 
 const InfoIcon = ({ width, height, color, text}) =>
@@ -11,22 +11,22 @@ className="icons">
     <div className="topRow">
         <div className="iconBackground">
             <div className="icon_pos"  > 
-            <FaBone color="Black" size="30" ></FaBone>
+            <FaHeartBroken color="red" size="30" ></FaHeartBroken>
             </div>
-            <p className="icon_text"> {text="Bone loss, fractures, and loss of muscle"} </p>
+            <p className="icon_text"> {text="Heart problems. These can include a rapid or pounding heart"} </p>
             
         </div>
         <div className="iconBackground">
             <div className="icon_pos"  > 
-            <FaPills color="Green"  size="30" ></FaPills>
+            <FaTeethOpen color="Green"  size="30" ></FaTeethOpen>
             </div>
-            <p className="icon_text"> {text="Anemia"} </p>
+            <p className="icon_text"> {text="Tearing of the lining of your esophagus,"} </p>
         </div>
         <div className="iconBackground">
             <div className="icon_pos"  > 
-            <FaHeart color="red" size="30" ></FaHeart>
+            <FaClinicMedical color="teal" size="30" ></FaClinicMedical>
             </div>
-            <p className="icon_text"> {text="Heart problems, possible heart failure"} </p>
+            <p className="icon_text"> {text="Reproductive issues, irregular or missed periods, and fertility problems"} </p>
     </div>
     </div>
     <br></br>
@@ -36,16 +36,16 @@ className="icons">
         <div className="topRow">   
             <div className="iconBackground">
                 <div className="icon_pos"  > 
-                <FaFemale color="lightPink" size="30" ></FaFemale>
+                <FaCandyCane color="lightPink" size="30" ></FaCandyCane>
                 </div>
-                <p className="icon_text"> {text="In females, absence of a period"} </p>
+                <p className="icon_text"> {text="Diabetes is linked to Bulimia"} </p>
                 
             </div>
             <div className="iconBackground">
                 <div className="icon_pos"  > 
-                <FaMale color="skyBlue" size="30" ></FaMale>
+                <FaTooth color="skyBlue" size="30" ></FaTooth>
                 </div>
-                <p className="icon_text"> {text="In males, decreased testosterone"} </p>
+                <p className="icon_text"> {text="Stomach acid can damage tooth enamel"} </p>
                 <br></br>
             </div>
             </div>

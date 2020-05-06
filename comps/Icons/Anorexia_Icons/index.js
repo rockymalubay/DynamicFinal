@@ -1,5 +1,5 @@
 import React from 'react';
-import './icon.css';
+import './anrx_icon.css';
 import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, } from 'react-icons/fa';
 
 
