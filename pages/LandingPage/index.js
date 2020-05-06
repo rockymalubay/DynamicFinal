@@ -35,7 +35,7 @@ const LandingPage = () => {
         <MainButton 
         btn_txt="Discover helplines"
         color="white"
-        backgroundColor="#22B573"
+        backgroundColor="Orange"
         txt_decoration="none"
         width="275px"
         height="60px" />
