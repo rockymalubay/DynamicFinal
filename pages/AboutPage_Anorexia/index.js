@@ -1,6 +1,6 @@
 import React from 'react';
 import './anorexia.css';
-import InfoIcon from '../../comps/Icons';
+import InfoIcon from '../../comps/Icons/Anorexia_Icons';
 import MainButton from '../../comps/buttons';
 import TextComp from '../TextComp';
 import MenuButton from '../../comps/MenuButton';
@@ -49,29 +49,36 @@ function bingeButton() {
 
 
         <div className="buttons"> 
-        <MainButton 
-        btn_txt="Anorexia"
-        color="white"
-        backgroundColor="#22B573"
-        txt_decoration="none"
-        
-        />
+        <div>
+            <MainButton 
+                btn_txt="Anorexia"
+                color="white"
+                backgroundColor="#22B573"
+                txt_decoration="none"
+                width="125px"
+            />
+        </div>
 
-        <MainButton 
-        btn_txt="Bulimia"
-        color="#22B573"
-        backgroundColor="white"
-        txt_decoration="none"
-        
-        /> 
+        <div>
+            <MainButton 
+                btn_txt="Bulimia"
+                color="#22B573"
+                backgroundColor="white"
+                txt_decoration="none"
+                width="125px"
+            /> 
+        </div>
 
-        <MainButton 
-        btn_txt="Binge-eating"
-        color="#22B573"
-        backgroundColor="White"
-        txt_decoration="none"
-        
-        /> 
+        <div>
+            <MainButton 
+                btn_txt="Binge-eating"
+                color="#22B573"
+                backgroundColor="White"
+                txt_decoration="none" 
+                width="125px"
+            /> 
+        </div>
+
         </div>
 
         <div className="title_txt">

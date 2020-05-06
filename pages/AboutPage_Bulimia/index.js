@@ -1,6 +1,6 @@
 import React from 'react';
 import './bulimia.css';
-import InfoIcon from '../../comps/Icons';
+import InfoIcon from '../../comps/Icons/Anorexia_Icons';
 import MainButton from '../../comps/buttons';
 import TextComp from '../TextComp';
 import MenuButton from '../../comps/MenuButton';
@@ -41,34 +41,39 @@ const BulimiaPage = () => {
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 
-
-        <MainButton 
-        btn_txt="Anorexia"
-        color="#22B573"
-        backgroundColor="white"
-        txt_decoration="none"
-        /> 
-
-
-        <br></br>
-        <MainButton 
-        btn_txt="Bulimia"
-        color="white"
-        backgroundColor="#22B573"
-        txt_decoration="none"
-        
-        > </MainButton>
-        <MainButton 
-        btn_txt="Binge-eating"
-        color="#22B573"
-        backgroundColor="White"
-        txt_decoration="none"
-        
-        > </MainButton>
+        <div>
+            <MainButton 
+                btn_txt="Anorexia"
+                color="white"
+                backgroundColor="#22B573"
+                txt_decoration="none"
+                width="125px"
+            />
         </div>
 
+        <div>
+            <MainButton 
+                btn_txt="Bulimia"
+                color="#22B573"
+                backgroundColor="white"
+                txt_decoration="none"
+                width="125px"
+            /> 
+        </div>
+
+        <div>
+            <MainButton 
+                btn_txt="Binge-eating"
+                color="#22B573"
+                backgroundColor="White"
+                txt_decoration="none" 
+                width="125px"
+            /> 
+        </div>
+
+        </div>
         <div className="title_txt">
-            <h2> Anorexia </h2>
+            <h2> Bulimia </h2>
             <hr></hr>
             <h3>You may be at increased risk towards:</h3>
         </div>

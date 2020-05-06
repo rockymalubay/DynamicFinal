@@ -40,6 +40,8 @@
     padding: 10px;
     place-items: 12px;
     margin: 1px;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn_pos {
