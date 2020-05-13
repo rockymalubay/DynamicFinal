@@ -1,11 +1,11 @@
 import React from 'react';
 import './binge.css';
-import InfoIcon from '../../comps/Icons/Binge_Icons';
+import InfoIcon from '../../comps/Binge_Icons';
 import MainButton from '../../comps/buttons';
 import TextComp from '../TextComp';
 import MenuButton from '../../comps/MenuButton';
 import Menu from '../../comps/Menu';
-import Router from 'next/router';
+import Router from 'next/router'; 
 
 const BingePage = () => {
 
