@@ -1,5 +1,5 @@
 import React from 'react';
-import Infoicon from '../comps/Icons/Anorexia_Icons';
+import Infoicon from '../comps/Anorexia_Icons';
 
 
 export default {
