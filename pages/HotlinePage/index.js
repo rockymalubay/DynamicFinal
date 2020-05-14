@@ -34,7 +34,7 @@ export default() => {
                 <div>
                     <FiPhoneCall className="callIcon"/>
                     <div>
-                        <div style={{color:"#22B573"}}>
+                        <div style={{color:"rgb(252, 121, 84)"}}>
                             <TextComp text="NEDIC"/>
                         </div>
                         <TextCo  text="1-866-NEDIC-20"/>
@@ -44,13 +44,13 @@ export default() => {
                 <div>
                     <FaHeadset style={{paddingLeft:"15px", paddingRight:"15px"}} className="callIcon"/>
                     <div>
-                        <div style={{color:"#22B573"}}>
+                        <div style={{color:"rgb(252, 121, 84)"}}>
                             <TextComp text="National Suicide Prevention Lifeline"/>
                         </div>
                         <TextCo  text="1-800-273-8255"/>
                     </div>   
                 </div>
-                <div>
+                <div className="email">
                     <TextCo text="Email to us:"/>
                 </div>
             </div>
