@@ -13,14 +13,14 @@ className="icons">
             <div className="icon_pos"  > 
             <FaBone color="Black" size="30" ></FaBone>
             </div>
-            <p className="icon_text"> {text="Bone loss, fractures, and loss of muscle"} </p>
+            <p className="icon_text"> {text="Obesity"} </p>
             
         </div>
         <div className="iconBackground">
             <div className="icon_pos"  > 
             <FaPills color="Green"  size="30" ></FaPills>
             </div>
-            <p className="icon_text"> {text="Anemia"} </p>
+            <p className="icon_text"> {text="Social isolation"} </p>
         </div>
     </div>
     <br></br>
@@ -32,14 +32,14 @@ className="icons">
                 <div className="icon_pos"  > 
                 <FaFemale color="lightPink" size="30" ></FaFemale>
                 </div>
-                <p className="icon_text"> {text="In females, absence of a period"} </p>
+                <p className="icon_text"> {text="Problems functioning at work, with your personal life or in social situations"} </p>
                 
             </div>
             <div className="iconBackground">
                 <div className="icon_pos"  > 
                 <FaMale color="skyBlue" size="30" ></FaMale>
                 </div>
-                <p className="icon_text"> {text="In males, decreased testosterone"} </p>
+                <p className="icon_text"> {text="Poor quality of life"} </p>
                 <br></br>
             </div>
             </div>
