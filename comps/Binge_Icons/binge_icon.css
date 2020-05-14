@@ -5,9 +5,9 @@
 }
 
 .iconBackground {
-    width: 40%;
-    height: 90%;
-    background-color: black;
+    width: 60px;
+    height: 60px;
+    background-color: white;
     box-shadow: grey 1px 5px 10px;
     border-radius: 50%;
     margin-left: 40px;
