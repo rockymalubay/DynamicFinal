@@ -8,9 +8,7 @@ import Menu from '../../comps/Menu';
 import Router from 'next/router';
 
 
-
-
-const AnorexiaPage = () => {
+export default () => {
 
     var menu_state = false;
 
@@ -110,9 +108,8 @@ function bingeButton() {
 }
 
 
-AnorexiaPage.defaultProps = {
+InfoIcon.defaultProps = {
     msg: "hi"
 
 }
-
-export default AnorexiaPage; 
+ 
