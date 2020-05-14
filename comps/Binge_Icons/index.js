@@ -11,7 +11,7 @@ className="icons">
     <div className="topRow">
         <div className="iconBackground">
             <div className="icon_pos"  > 
-            <FaBone color="Black" size="30" ></FaBone>
+            <FaBone color="Black" size="70%" ></FaBone>
             </div>
             <p className="icon_text"> {text="Bone loss, fractures, and loss of muscle"} </p>
             

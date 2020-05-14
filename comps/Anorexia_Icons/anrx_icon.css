@@ -7,7 +7,7 @@
 .iconBackground {
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: black;
     box-shadow: grey 1px 5px 10px;
     border-radius: 50%;
     margin-left: 40px;
@@ -73,6 +73,7 @@
     color: white;
     margin-left: 25px;
     margin-right: 25px;
+    justify-content: center;
 }
 
 .title_txt2 {
