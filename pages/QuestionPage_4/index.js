@@ -6,6 +6,8 @@ import OptionsButton from '../../comps/OptionsButton';
 import Menu from '../../comps/Menu';
 import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
+import './qPage_4.css';
+import QuImage from './Question4.png';
 
 function PageResults() {
 
@@ -42,6 +44,9 @@ export default () => {
                 <div>
                     <Menu />
                 </div>
+            <div className="imagePo">
+                <img src={QuImage}/>
+            </div>
             <div className="textComp">
                 <TextComp
                 text="Are you doing self-induced vomiting?"/>
