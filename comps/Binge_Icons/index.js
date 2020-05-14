@@ -1,6 +1,6 @@
 import React from 'react';
 import './binge_icon.css';
-import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, } from 'react-icons/fa';
+import { FaBone, FaPills, FaHeart, FaFemale, FaMale, FaBrain, FaWineBottle, FaHamburger, FaAngry, FaCogs, FaSadCry } from 'react-icons/fa';
 
 
 const InfoIcon = ({ width, height, color, text}) =>
@@ -11,14 +11,14 @@ className="icons">
     <div className="topRow">
         <div className="iconBackground">
             <div className="icon_pos"  > 
-            <FaBone color="Black" size="30" ></FaBone>
+            <FaHamburger color="Orange" size="30" ></FaHamburger>
             </div>
             <p className="icon_text"> {text="Obesity"} </p>
             
         </div>
         <div className="iconBackground">
             <div className="icon_pos"  > 
-            <FaPills color="Green"  size="30" ></FaPills>
+            <FaAngry color="Green"  size="30" ></FaAngry>
             </div>
             <p className="icon_text"> {text="Social isolation"} </p>
         </div>
@@ -30,14 +30,14 @@ className="icons">
         <div className="topRow">   
             <div className="iconBackground">
                 <div className="icon_pos"  > 
-                <FaFemale color="lightPink" size="30" ></FaFemale>
+                <FaCogs color="Red" size="30" ></FaCogs>
                 </div>
                 <p className="icon_text"> {text="Problems functioning at work, with your personal life or in social situations"} </p>
                 
             </div>
             <div className="iconBackground">
                 <div className="icon_pos"  > 
-                <FaMale color="skyBlue" size="30" ></FaMale>
+                <FaSadCry color="skyBlue" size="30" ></FaSadCry>
                 </div>
                 <p className="icon_text"> {text="Poor quality of life"} </p>
                 <br></br>
