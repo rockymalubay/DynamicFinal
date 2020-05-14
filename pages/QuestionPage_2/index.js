@@ -6,6 +6,8 @@ import OptionsButton from '../../comps/OptionsButton';
 import Menu from '../../comps/Menu';
 import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
+import './qPage_2.css';
+import Q2Image from './Question2.png';
 
 function PageThree() {
 
@@ -41,6 +43,9 @@ export default () => {
                 <div>
                     <Menu />
                 </div>
+            <div className="imagePo">
+                <img src={Q2Image}/>
+            </div>
             <div className="textComp">
                 <TextComp
                 text="Do you think you have a problem with?"/>

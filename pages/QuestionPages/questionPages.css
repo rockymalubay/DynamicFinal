@@ -1,28 +1,31 @@
+
 .pageContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: solid orange 1px;
-    width:414px;
-    height:896px;
+    width:100%;
+    height:100%;
     margin: 0;
-    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: linear-gradient(#2bb8db 0%, rgba(18, 223, 62, 0.47) 100%);
+    ;
 }
 
 .textComp{
-    margin-top: 150px;
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
     height: 150px;
     display: inline-flex;
     justify-content: center;
-    align-items: top;
     text-align: center;
+    color: ivory;
+    text-shadow: 1.5px 2px rgba(252, 121, 84, 0.7);
 }
 
 .answers{
-    margin-top: 20px;
-    height: 350px;
+    height: 300px;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -30,20 +33,22 @@
 }
 
 .menuButton{
-    position: relative;
+    position: absolute;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    top: 30px;
+    right: 15px;
+
 }
 
 .arrowButtons{
-    display: inline-flex;
-    position: relative !important;
+    display:inline-flex;
+    position: relative;
     justify-content: space-between;
-    align-items: bottom;
-    margin-left: 10px;
-    margin-right: 10px;
+    align-items: center;
+    margin: 10px;
+    margin-top: 100px;
 }
 
 .rightArrow{
@@ -58,4 +63,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
+}
+.imagePo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
 }

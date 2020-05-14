@@ -39,7 +39,7 @@ function bulimiaButton() {
     Router.push("/AboutPage_Bulimia");
 }
 
-    return <div className="pageContainer_about"> 
+    return <div className="pageContainer_aboutBinge"> 
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 

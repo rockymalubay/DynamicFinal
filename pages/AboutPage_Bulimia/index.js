@@ -39,7 +39,7 @@ function MenuToggle() {
         Router.push("/AboutPage_Binge");
 }
 
-    return <div className="pageContainer_about"> 
+    return <div className="pageContainer_aboutBulimia"> 
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
         
         <div className="buttons"> 

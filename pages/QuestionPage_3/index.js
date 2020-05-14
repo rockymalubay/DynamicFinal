@@ -6,6 +6,8 @@ import OptionsButton from '../../comps/OptionsButton';
 import Menu from '../../comps/Menu';
 import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
+import './qPage_3.css';
+import Q3Image from './Question3.png';
 
 function PageFour() {
 
@@ -42,6 +44,9 @@ export default () => {
                 <div>
                     <Menu />
                 </div>
+            <div className="imagePo">
+                <img src={Q3Image}/>
+            </div>
             <div className="textComp">
                 <TextComp
                 text="How often is it troubling you?"/>

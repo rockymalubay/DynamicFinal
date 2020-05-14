@@ -3,8 +3,8 @@
     flex-direction: column;
     /* justify-content: center; */
     border: solid orange 1px;
-    width:414px;
-    height:896px;
+    width:100vw;
+    height:100vh;
     margin: 0;
     padding: 0;
     background: linear-gradient(#5da9e9 0%, rgba(93, 169, 233, 0.47) 100%);
