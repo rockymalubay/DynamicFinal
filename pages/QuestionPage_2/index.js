@@ -45,7 +45,7 @@ export default () => {
     }
       console.log('state', state)
 
-    function PageThree() {
+    function pageThree() {
         const { bodyImage, mentalIssue, anxiety, recentTragedy } = state
 
         if(bodyImage || mentalIssue || anxiety || recentTragedy) {
@@ -81,19 +81,19 @@ export default () => {
             </div>
             <div onClick={() => setState({ mentalIssue: !state.mentalIssue })}>
                 <OptionsButton
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                color={state.mentalIssue ? "#5fcc72" : "#FC7753"}
                 text="Mental Issue?"
                 />
             </div>
             <div onClick={() => setState({ anxiety: !state.anxiety })}>
                 <OptionsButton
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                color={state.anxiety ? "#5fcc72" : "#FC7753"}
                 text="Anxiety?"
                 />
             </div>
             <div onClick={() => setState({ recentTragedy: !state.recentTragedy })}>
                 <OptionsButton
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                color={state.recentTragedy ? "#5fcc72" : "#FC7753"}
                 text="Recent Tragedy?"
                 />
             </div>
@@ -107,7 +107,7 @@ export default () => {
                     text="🡠"
                     />
                 </div>
-                <div className="rightArrow" onClick={PageThree}>
+                <div className="rightArrow" onClick={pageThree}>
                     <ArrowButton
                     text="🡢"
                     />

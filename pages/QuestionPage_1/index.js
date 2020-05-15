@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -8,13 +8,10 @@ import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
 import './qPage_1.css';
 import Q1Image from './Question1.png';
+import { useGlobalState } from '../../providers/GlobalStateProvider'
 
-function PageTwo() {
 
-    if(confirm("Are you sure?")){
-        Router.push("/QuestionPage_2");
-    }
-}
+
 
 function BackPage() {
 
@@ -40,6 +37,24 @@ function MenuToggle() {
 
 
 export default ({img}) => {
+    const [ globalState, setGlobalState ] = useGlobalState()
+    const [ state, setState ] = useReducer(reducer, {})
+    
+    function reducer (currentState, newState) {
+      return {...currentState, ...newState}
+    }
+      console.log('state', state)
+
+    function PageTwo() {
+        const { tooLittle, tooMuch } = state
+
+        if(tooLittle || tooMuch) {
+            Router.push("/QuestionPage_2");
+        } else {
+            alert('Please select at least one option!')
+        }
+    };
+
     return(
         <div className="pageContainer">
             <div>
@@ -53,15 +68,16 @@ export default ({img}) => {
                 text="Are you eating?"/>
             </div>
             <div className="answers">
-                <div onClick={PageTwo}>
+                <div onClick={() => setState({ tooLittle: !state.tooLittle })}>
                 <OptionsButton
+                            color={state.tooLittle? "#5fcc72" : "#FC7753"}
                 text="Too Little?"
                 />
                 </div>
-                <div onClick={PageTwo}>
+                <div onClick={() => setState({ tooMuch: !state.tooMuch })}>
                 <OptionsButton
+                            color={state.tooMuch ? "#5fcc72" : "#FC7753"}
                 text="Too Much?"
-                onclick={PageTwo}
                 />
                 </div>
             </div>

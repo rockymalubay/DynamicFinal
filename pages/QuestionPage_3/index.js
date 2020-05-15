@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -8,13 +8,10 @@ import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
 import './qPage_3.css';
 import Q3Image from './Question3.png';
+import { useGlobalState } from '../../providers/GlobalStateProvider';
+import '../../comps/OptionsButton/options.css'
 
-function PageFour() {
 
-    if(confirm("Are you sure?")){
-        Router.push("/QuestionPage_4");
-    }
-}
 
 function BackPage() {
 
@@ -39,6 +36,24 @@ function MenuToggle() {
 }
 
 export default () => {
+    const [ globalState, setGlobalState ] = useGlobalState()
+    const [ state, setState ] = useReducer(reducer, {})
+    
+    function reducer (currentState, newState) {
+      return {...currentState, ...newState}
+    }
+      console.log('state', state)
+
+    function PageFour() {
+        const { onceDay, threeDay, allDay } = state
+
+        if(onceDay || threeDay || allDay) {
+            Router.push("/QuestionPage_4");
+        } else {
+            alert('Please select at least one option!')
+        }
+    };
+
     return(
         <div className="pageContainer">
                 <div>
@@ -53,18 +68,21 @@ export default () => {
             </div>
             <div className="answers">
 
-            <div onClick={PageFour}>
+            <div onClick={() => setState({ onceDay: !state.onceDay })}>
                 <OptionsButton
+                color={state.onceDay ? "#5fcc72" : "#FC7753"}
                 text="Once a Day"
                 />
             </div>
-            <div onClick={PageFour}>
+            <div onClick={() => setState({ threeDay: !state.threeDay })}>
                 <OptionsButton
+                color={state.threeDay ? "#5fcc72" : "#FC7753"}
                 text="3 times a Day"
                 />
             </div>
-            <div onClick={PageFour}>
+            <div onClick={() => setState({ allDay: !state.allDay })}>
                 <OptionsButton
+                color={state.allDay ? "#5fcc72" : "#FC7753"}
                 text="All Day"
                 />
             </div>
