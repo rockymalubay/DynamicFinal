@@ -1,8 +1,8 @@
 import React from 'react';
 import Router from 'next/router';
-import './landingpg.css';
-import Logo from '../../comps/Logo';
-import MainButton from '../../comps/buttons';
+import './landing.css';
+import OptionButton from '../../comps/OptionsButton';
+import Logo from './Logo.png';
 
 function testButton() {
     Router.push("/QuestionPage_1");
@@ -15,34 +15,22 @@ function testButton() {
         }
 
 const LandingPage = () => {
-    return <div className="LandingpageContainer_about"> 
-        <div className="logo">
-        <Logo />
-        
-        </div>
-        
-        <div className="button" onClick={testButton}>
-        <MainButton 
-        btn_txt="Take the test"
-        color="white"
-        backgroundColor="Orange"
-        txt_decoration="none"
-        width="275px"
-        height="60px" />
-        </div>
-        <br></br>
-        <div className="button" onClick={hotlineButton}>
-        <MainButton 
-        btn_txt="Discover helplines"
-        color="white"
-        backgroundColor="Orange"
-        txt_decoration="none"
-        width="275px"
-        height="60px" />
-        </div>
+    return (<div className="LandingPageContainer_about">
 
+                <div className="logo">
+                    <img src={Logo} />
+                </div>
 
-        </div>
+                <div className="buttonBox">
+                    <div className="button" onClick={testButton}>
+                        <OptionButton text="Start Test"/>
+                    </div>
+                    <br></br>
+                    <div className="button" onClick={hotlineButton}>
+                        <OptionButton text="Discover Hotline Page" />
+                    </div>
+                </div>
+            </div>)
 
 }
 
