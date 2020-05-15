@@ -27,14 +27,14 @@ function MenuToggle() {
     
 }
 
-export default() => {
+export default({fontSize}) => {
     return(
         <div className="pageContainer">
             <div className="hotlineBox">
                 <div>
                     <FiPhoneCall className="callIcon"/>
                     <div>
-                        <div style={{color:"#22B573"}}>
+                        <div style={{color:"rgb(252, 121, 84)"}}>
                             <TextComp text="NEDIC"/>
                         </div>
                         <TextCo  text="1-866-NEDIC-20"/>
@@ -44,13 +44,14 @@ export default() => {
                 <div>
                     <FaHeadset style={{paddingLeft:"15px", paddingRight:"15px"}} className="callIcon"/>
                     <div>
-                        <div style={{color:"#22B573"}}>
-                            <TextComp text="National Suicide Prevention Lifeline"/>
+                        <div style={{color:"rgb(252, 121, 84)"}}>
+                            <TextComp 
+                            text="National Suicide Prevention Lifeline"/>
                         </div>
                         <TextCo  text="1-800-273-8255"/>
                     </div>   
                 </div>
-                <div>
+                <div className="email">
                     <TextCo text="Email to us:"/>
                 </div>
             </div>
@@ -59,19 +60,19 @@ export default() => {
                     <div>
                         <TextCo text="Name*"/>
                         <div>
-                            <Input/>
+                            <input className="inputBox"/>
                         </div>
                     </div>
                     <div>
                         <TextCo text="Email Address*"/>
                         <div>
-                            <Input/>
+                            <input className="inputBox"/>
                         </div>
                     </div>
                     <div>
                         <TextCo text="Message*"/>
                         <div >
-                            <Input id="inputSize"/>
+                            <input className="inputBox" id="inputSize"/>
                         </div>
                     </div>
                 </div>

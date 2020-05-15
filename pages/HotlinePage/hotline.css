@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    width: 400px;
-    margin-left: 30px;
+    width: 100%;
+    margin-top: 120px;
 }
 
 .sendButton{
@@ -13,7 +13,8 @@
     align-items: flex-end;
     position: relative;
     right: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    margin-top: 20px;
 }
 .inputComp{
     display: inline-flex;
@@ -41,4 +42,17 @@
 
 #inputSize{
     height: 50px !important;
+}
+.email{
+    margin-left: 15px;
+    margin-top: 60px;
+}
+
+.inputBox{
+    border: #707070 2px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(92, 65, 65);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
