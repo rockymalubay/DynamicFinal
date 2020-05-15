@@ -41,10 +41,8 @@ function bingeButton() {
 }
 
 
-    return <div className="pageContainer_about"> 
-        {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
-
-
+    return (
+    <div className="pageContainer_about"> 
 
         <div className="buttons"> 
         <div>
@@ -103,13 +101,7 @@ function bingeButton() {
 
     </div>
 
-
-    
+    )
 }
 
-
-InfoIcon.defaultProps = {
-    msg: "hi"
-
-}
  
