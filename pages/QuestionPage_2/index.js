@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -8,12 +8,10 @@ import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
 import './qPage_2.css';
 import Q2Image from './Question2.png';
+import { useGlobalState } from '../../providers/GlobalStateProvider'
 
-function PageThree() {
 
-    if(confirm("Are you sure?")){
-         Router.push("/QuestionPage_3");    }
-};
+
 
 function BackPage() {
 
@@ -37,7 +35,26 @@ function MenuToggle() {
     
 }
 
+
 export default () => {
+    const [ globalState, setGlobalState ] = useGlobalState()
+    const [ state, setState ] = useReducer(reducer, {})
+    
+    function reducer (currentState, newState) {
+      return {...currentState, ...newState}
+    }
+      console.log('state', state)
+
+    function PageThree() {
+        const { bodyImage, mentalIssue, anxiety, recentTragedy } = state
+
+        if(bodyImage || mentalIssue || anxiety || recentTragedy) {
+            Router.push("/QuestionPage_3");
+        } else {
+            alert('Please select at least one option!')
+        }
+    };
+
     return(
         <div className="pageContainer">
                 <div>
@@ -52,23 +69,31 @@ export default () => {
             </div>
             <div className="answers">
 
-            <div onClick={PageThree}>
-                <OptionsButton
+            <div 
+                
+                onClick={() => setState({ bodyImage: !state.bodyImage })}
+            >
+                <OptionsButton 
+                // style={{backgroundColor: state.bodyImage ? "green" : " blue"}}
+                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
                 text="Body Image?"
                 />
             </div>
-            <div onClick={PageThree}>
+            <div onClick={() => setState({ mentalIssue: !state.mentalIssue })}>
                 <OptionsButton
+                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
                 text="Mental Issue?"
                 />
             </div>
-            <div onClick={PageThree}>
+            <div onClick={() => setState({ anxiety: !state.anxiety })}>
                 <OptionsButton
+                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
                 text="Anxiety?"
                 />
             </div>
-            <div onClick={PageThree}>
+            <div onClick={() => setState({ recentTragedy: !state.recentTragedy })}>
                 <OptionsButton
+                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
                 text="Recent Tragedy?"
                 />
             </div>

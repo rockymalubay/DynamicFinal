@@ -3,6 +3,7 @@ import Router from 'next/router';
 import './landing.css';
 import OptionButton from '../../comps/OptionsButton';
 import Logo from './Logo.png';
+import GlobalStateProvider from '../../providers/GlobalStateProvider'
 
 function testButton() {
     Router.push("/QuestionPage_1");
@@ -15,7 +16,11 @@ function testButton() {
         }
 
 const LandingPage = () => {
-    return (<div className="LandingPageContainer_about">
+
+
+    return (
+        <GlobalStateProvider>
+            <div className="LandingPageContainer_about">
 
                 <div className="logo">
                     <img src={Logo} />
@@ -30,7 +35,9 @@ const LandingPage = () => {
                         <OptionButton text="Discover Hotline Page" />
                     </div>
                 </div>
-            </div>)
+            </div>
+        </GlobalStateProvider>
+    )
 
 }
 
