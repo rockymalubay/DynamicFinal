@@ -87,18 +87,20 @@ function bingeButton() {
                 <InfoIcon> </InfoIcon>
                 
         </div>
-        <div className="btn_pos" onClick={helplineButton}  >
-       <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
-       </div>
 
-       <div>
-            <Menu />
+        <div className="bottombtnpos">
+                    <div className="btn_pos" onClick={helplineButton}  >
+                <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
+                </div>
+
+                <div>
+                        <Menu />
+                    </div>
+
+                <div className="menu_pos" onClick={MenuToggle} >
+                    <MenuButton />
+                </div>
         </div>
-
-       <div className="menu_pos" onClick={MenuToggle} >
-           <MenuButton />
-       </div>
-
     </div>
 
     )
