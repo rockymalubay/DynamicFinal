@@ -41,10 +41,8 @@ function bingeButton() {
 }
 
 
-    return <div className="pageContainer_about"> 
-        {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
-
-
+    return (
+    <div className="pageContainer_about"> 
 
         <div className="buttons"> 
         <div>
@@ -89,27 +87,23 @@ function bingeButton() {
                 <InfoIcon> </InfoIcon>
                 
         </div>
-        <div className="btn_pos" onClick={helplineButton}  >
-       <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
-       </div>
 
-       <div>
-            <Menu />
+        <div className="bottombtnpos">
+                    <div className="btn_pos" onClick={helplineButton}  >
+                <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
+                </div>
+
+                <div>
+                        <Menu />
+                    </div>
+
+                <div className="menu_pos" onClick={MenuToggle} >
+                    <MenuButton />
+                </div>
         </div>
-
-       <div className="menu_pos" onClick={MenuToggle} >
-           <MenuButton />
-       </div>
-
     </div>
 
-
-    
+    )
 }
 
-
-InfoIcon.defaultProps = {
-    msg: "hi"
-
-}
  

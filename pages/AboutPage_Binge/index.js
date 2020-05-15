@@ -76,7 +76,7 @@ function bulimiaButton() {
         </div>
 
         <div className="title_txt">
-            <h2> Anorexia </h2>
+            <h2> Binge </h2>
             <hr></hr>
             <h3>You may be at increased risk towards:</h3>
         </div>
