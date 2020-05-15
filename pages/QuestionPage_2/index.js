@@ -81,19 +81,19 @@ export default () => {
             </div>
             <div onClick={() => setState({ mentalIssue: !state.mentalIssue })}>
                 <OptionsButton
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                color={state.mentalIssue ? "#5fcc72" : "#FC7753"}
                 text="Mental Issue?"
                 />
             </div>
             <div onClick={() => setState({ anxiety: !state.anxiety })}>
                 <OptionsButton
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                color={state.anxiety ? "#5fcc72" : "#FC7753"}
                 text="Anxiety?"
                 />
             </div>
             <div onClick={() => setState({ recentTragedy: !state.recentTragedy })}>
                 <OptionsButton
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                color={state.recentTragedy ? "#5fcc72" : "#FC7753"}
                 text="Recent Tragedy?"
                 />
             </div>
