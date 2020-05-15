@@ -45,14 +45,14 @@
 }
 
 .btn_pos {
-    position: relative;
+    position: fixed;
     align-items: center;
     left: 57px;
-    top: 120px;
+    bottom: 120px;
 }
 
 .menu_pos {
-    position: relative;
+    position: fixed;
     left: 170px;
-    top: 130px;
+    bottom: 130px;
 }

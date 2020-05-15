@@ -16,7 +16,6 @@
     margin-bottom: 15px;
     cursor: pointer;
 }
-.custom_button_box::selection{
-    background:none;
-    color: none;
+.options_button_box:focus{
+    border: 2px solid greenyellow;
 }

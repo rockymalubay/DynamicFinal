@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -8,6 +8,7 @@ import MenuButton from '../../comps/MenuButton';
 import '../QuestionPages/questionPages.css';
 import './qPage_4.css';
 import QuImage from './Question4.png';
+import { useGlobalState } from '../../providers/GlobalStateProvider'
 
 function PageResults() {
 
@@ -39,6 +40,24 @@ function MenuToggle() {
 }
 
 export default () => {
+    const [ globalState, setGlobalState ] = useGlobalState()
+    const [ state, setState ] = useReducer(reducer, {})
+    
+    function reducer (currentState, newState) {
+      return {...currentState, ...newState}
+    }
+      console.log('state', state)
+
+    function PageFour() {
+        const { yes, no} = state
+
+        if(yes || no) {
+            Router.push("/AboutPage_Anorexia");
+        } else {
+            alert('Please select at least one option!')
+        }
+    };
+
     return(
         <div className="pageContainer">
                 <div>
@@ -52,13 +71,16 @@ export default () => {
                 text="Are you doing self-induced vomiting?"/>
             </div>
             <div className="answers">
-            <div onClick={PageResults}>
+            <div onClick={() => setState({ yes: !state.yes })}>
+
                 <OptionsButton
+                            color={state.yes ? "#5fcc72" : "#FC7753"}
                 text="Yes"
                 />
             </div>
-            <div onClick={PageResults}>
+            <div onClick={() => setState({ no: !state.no })}>
                 <OptionsButton
+                                color={state.no ? "#5fcc72" : "#FC7753"}
                 text="No"
                 />
             </div>
