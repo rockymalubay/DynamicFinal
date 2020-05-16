@@ -40,7 +40,9 @@ function bulimiaButton() {
 }
 
     return <div className="pageContainer_aboutBinge"> 
-        {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}
+        <div className="title_txt">
+            <h2> You may have: </h2>
+</div>
         
         <div className="buttons"> 
         <div onClick={anorexiaButton}>
@@ -76,7 +78,6 @@ function bulimiaButton() {
         </div>
 
         <div className="title_txt">
-            <h2> Binge </h2>
             <hr></hr>
             <h3>You may be at increased risk towards:</h3>
         </div>
@@ -85,11 +86,20 @@ function bulimiaButton() {
                 <InfoIcon> </InfoIcon>
                 
         </div>
-        <div className="btn_pos"  onClick={helplineButton}  >
-       <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
-       </div>
-       <div className="menu_pos" onClick={MenuToggle}><MenuButton></MenuButton></div>
-       <Menu />
+        <div className="bottombtnpos">
+                    <div className="btn_pos" onClick={helplineButton}  >
+                <MainButton btn_txt="Click here to discover helplines" width="250px"></MainButton>  
+                </div>
+
+                <div>
+                        <Menu />
+                    </div>
+
+               
+        </div>
+        <div className="menu_pos" onClick={MenuToggle} >
+                    <MenuButton />
+                </div>
     </div>
 
 
