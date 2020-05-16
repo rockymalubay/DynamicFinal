@@ -44,6 +44,9 @@ function bingeButton() {
     return (
     <div className="pageContainer_about"> 
 
+<div className="title_txt">
+            <h2> You may have: </h2>
+</div>
         <div className="buttons"> 
         <div>
             <MainButton 
@@ -51,7 +54,7 @@ function bingeButton() {
                 color="white"
                 backgroundColor="#22B573"
                 txt_decoration="none"
-                width="125px"
+                width="100px"
             />
         </div>
 
@@ -61,7 +64,7 @@ function bingeButton() {
                 color="#22B573"
                 backgroundColor="white"
                 txt_decoration="none"
-                width="125px"
+                width="100px"
             /> 
         </div>
 
@@ -71,14 +74,13 @@ function bingeButton() {
                 color="#22B573"
                 backgroundColor="White"
                 txt_decoration="none" 
-                width="125px"
+                width="100px"
             /> 
         </div>
 
         </div>
 
         <div className="title_txt">
-            <h2> Anorexia </h2>
             <hr></hr>
             <h3>You may be at increased risk towards:</h3>
         </div>
@@ -90,17 +92,18 @@ function bingeButton() {
 
         <div className="bottombtnpos">
                     <div className="btn_pos" onClick={helplineButton}  >
-                <MainButton btn_txt="Click here to discover helplines" width="300px"></MainButton>  
+                <MainButton btn_txt="Click here to discover helplines" width="250px"></MainButton>  
                 </div>
 
                 <div>
                         <Menu />
                     </div>
 
-                <div className="menu_pos" onClick={MenuToggle} >
+               
+        </div>
+        <div className="menu_pos" onClick={MenuToggle} >
                     <MenuButton />
                 </div>
-        </div>
     </div>
 
     )
