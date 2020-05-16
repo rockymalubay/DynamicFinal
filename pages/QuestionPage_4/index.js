@@ -38,12 +38,7 @@ export default () => {
         anxiety,
         bodyImage, 
         mentalIssue,
-        recentTragedy,
-        tooLittle,
-        tooMuch,
-        onceDay,
-        threeDay,
-        allDay, 
+        recentTragedy, 
     } = globalState
     console.log('state', globalState)
 
@@ -51,11 +46,11 @@ export default () => {
     function PageResults() {
         const { yes, no} = globalState
 
-        if(tooLittle || bodyImage || mentalIssue || threeDay) {
+        if(bodyImage || mentalIssue ) {
             Router.push("/AboutPage_Anorexia");
-        } else if(tooMuch || anxiety || onceDay || yes) {
+        } else if( anxiety ) {
             Router.push("/AboutPage_Binge");
-        } else if( allDay || recentTragedy || no) {
+        } else if( recentTragedy) {
             Router.push("/AboutPage_Bulimia");
         }
         else {
