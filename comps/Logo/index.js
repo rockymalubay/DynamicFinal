@@ -1,7 +1,7 @@
 import React from 'react';
 import './logo.css';
 
-const defaulting = require('./Logo.png');
+// const defaulting = require('./Logo.png');
 
 const Logo = ({img}) => 
 <div className= "logo">
