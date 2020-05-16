@@ -1,3 +1,10 @@
+body, html{
+    margin: 0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#5fcc72 0%, rgba(77, 221, 226, 0.47) 100%);
+    overflow-x: hidden;
+}
 
 .pageContainer{
     display: flex;
@@ -9,6 +16,8 @@
     padding-top: 15px;
     padding-bottom: 15px;
     background: linear-gradient(#5fcc72 0%, rgba(77, 221, 226, 0.47) 100%);
+    right: -100%;
+    transition: right 1s;
 }
 
 .textComp{

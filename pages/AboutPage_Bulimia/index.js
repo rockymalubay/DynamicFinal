@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './bulimia.css';
 import InfoIcon from '../../comps/Bulimia_Icons';
 import MainButton from '../../comps/buttons';
@@ -38,6 +38,12 @@ function MenuToggle() {
     
         Router.push("/AboutPage_Binge");
 }
+
+useEffect(() => {
+    setTimeout(()=>{
+        document.querySelector(".pageContainer_aboutBulimia").style.opacity= "1";
+    }, 50); 
+},[]);
 
     return <div className="pageContainer_aboutBulimia"> 
         {/* <FaBone className="icon_positioning"size="40" color="Black"/> */}

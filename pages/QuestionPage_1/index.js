@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -49,11 +49,20 @@ export default ({img}) => {
         const { tooLittle, tooMuch } = globalState
 
         if(tooLittle || tooMuch) {
-            Router.push("/QuestionPage_2"); 
+            document.querySelector(".pageContainer").style.left = "-100%";
+            setTimeout(function(){
+                Router.push("/QuestionPage_2"); 
+                }, 1000)
         } else {
             alert('Please select at least one option!')
         }
     };
+
+    useEffect(() => {
+        setTimeout(()=>{
+            document.querySelector(".pageContainer").style.opacity= "1";
+        }, 50); 
+    },[]);
 
     return(
         <div className="pageContainer">

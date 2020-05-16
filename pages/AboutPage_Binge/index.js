@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './binge.css';
 import InfoIcon from '../../comps/Binge_Icons';
 import MainButton from '../../comps/buttons';
@@ -38,6 +38,12 @@ function bulimiaButton() {
 
     Router.push("/AboutPage_Bulimia");
 }
+
+useEffect(() => {
+    setTimeout(()=>{
+        document.querySelector(".pageContainer_aboutBinge").style.opacity= "1";
+    }, 50); 
+},[]);
 
     return <div className="pageContainer_aboutBinge"> 
         <div className="title_txt">

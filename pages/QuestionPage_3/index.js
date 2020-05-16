@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -44,11 +44,20 @@ export default () => {
         const { onceDay, threeDay, allDay } = globalState
 
         if(onceDay || threeDay || allDay) {
-            Router.push("/QuestionPage_4");
+            document.querySelector(".pageContainer").style.left = "-100%";
+            setTimeout(function(){
+                Router.push("/QuestionPage_4"); 
+                }, 1000)
         } else {
             alert('Please select at least one option!')
         }
     };
+
+    useEffect(() => {
+        setTimeout(()=>{
+            document.querySelector(".pageContainer").style.opacity= "1";
+        }, 50); 
+    },[]);
 
     return(
         <div className="pageContainer">

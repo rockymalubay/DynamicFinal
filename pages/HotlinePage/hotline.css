@@ -1,3 +1,15 @@
+body, html {
+    margin: 0;
+    background: linear-gradient(#5fcc72 0%, rgba(77, 221, 226, 0.47) 100%);
+    overflow-x: hidden;
+}
+.pageContainer{
+    height: 911px;
+    position: relative;
+    right: -100%;
+    transition: right 1s;
+}
+
 .hotlineBox{
     display: inline-flex;
     flex-direction: column;
