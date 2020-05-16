@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Router from 'next/router';
 import './landing.css';
 import OptionButton from '../../comps/OptionsButton';
@@ -6,19 +6,25 @@ import Logo from './Logo.png';
 import GlobalStateProvider from '../../providers/GlobalStateProvider'
 
 function testButton() {
-    Router.push("/QuestionPage_1");
-    
+    document.querySelector(".LandingPageContainer_about").style.left = "-100%";
+    setTimeout(function(){
+        Router.push("/QuestionPage_1");
+        }, 1000)
     }
 
     function hotlineButton() {
-        Router.push("/HotlinePage");
-        
+        document.querySelector(".LandingPageContainer_about").style.left = "-100%";
+        setTimeout(function(){
+            Router.push("/HotlinePage");
+            }, 1000)
         }
 
 const LandingPage = () => {
 
+    
 
     return (
+        
         <GlobalStateProvider>
             <div className="LandingPageContainer_about">
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './anorexia.css';
 import InfoIcon from '../../comps/Anorexia_Icons';
 import MainButton from '../../comps/buttons';
@@ -40,6 +40,11 @@ function bingeButton() {
     Router.push("/AboutPage_Binge");
 }
 
+useEffect(() => {
+    setTimeout(()=>{
+        document.querySelector(".pageContainer_about").style.opacity= "1";
+    }, 50); 
+},[]);
 
     return (
     <div className="pageContainer_about"> 

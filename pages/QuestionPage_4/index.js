@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -47,16 +47,31 @@ export default () => {
         const { yes, no} = globalState
 
         if(bodyImage || mentalIssue ) {
-            Router.push("/AboutPage_Anorexia");
+            document.querySelector(".pageContainer").style.left = "-100%";
+            setTimeout(function(){
+                Router.push("/AboutPage_Anorexia");
+                }, 1000)
         } else if( anxiety ) {
-            Router.push("/AboutPage_Binge");
+            document.querySelector(".pageContainer").style.left = "-100%";
+            setTimeout(function(){
+                Router.push("/AboutPage_Binge");
+                }, 1000)
         } else if( recentTragedy) {
-            Router.push("/AboutPage_Bulimia");
+            document.querySelector(".pageContainer").style.left = "-100%";
+            setTimeout(function(){
+                Router.push("/AboutPage_Bulimia")
+                }, 1000)
         }
         else {
             alert('Please select at least one option!')
         }
     };
+
+    useEffect(() => {
+        setTimeout(()=>{
+            document.querySelector(".pageContainer").style.opacity= "1";
+        }, 50); 
+    },[]);
 
     return(
         <div className="pageContainer">

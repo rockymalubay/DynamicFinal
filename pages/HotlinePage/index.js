@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Router from 'next/router';
 import TextComp from '../TextComp';
 import TextCo from '../TextCo';
@@ -28,6 +28,14 @@ function MenuToggle() {
 }
 
 export default({fontSize}) => {
+
+    
+    useEffect(() => {
+        setTimeout(()=>{
+            document.querySelector(".pageContainer").style.right= "0%";
+        }, 50); 
+    },[]);
+
     return(
         <div className="pageContainer">
             <div className="hotlineBox">

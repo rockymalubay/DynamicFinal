@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import Router from 'next/router';
 import ArrowButton from '../../comps/buttons/ArrowButton';
 import TextComp from '../TextComp';
@@ -45,11 +45,20 @@ export default () => {
         const { bodyImage, mentalIssue, anxiety, recentTragedy } = globalState
 
         if(bodyImage || mentalIssue || anxiety || recentTragedy) {
-            Router.push("/QuestionPage_3");
+            document.querySelector(".pageContainer").style.left = "-100%";
+            setTimeout(function(){
+                Router.push("/QuestionPage_3"); 
+                }, 1000)
         } else {
             alert('Please select at least one option!')
         }
     };
+
+    useEffect(() => {
+        setTimeout(()=>{
+            document.querySelector(".pageContainer").style.opacity= "1";
+        }, 50); 
+    },[]);
 
     return(
         <div className="pageContainer">
