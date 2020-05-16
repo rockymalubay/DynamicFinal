@@ -10,13 +10,6 @@ import './qPage_4.css';
 import QuImage from './Question4.png';
 import { useGlobalState } from '../../providers/GlobalStateProvider'
 
-function PageResults() {
-
-    if(confirm("Are you ready to submit your answers?")){
-        Router.push("/AboutPage_Anorexia");
-    }
-}
-
 function BackPage() {
 
     if(confirm("Do you want to change your previous answer?")){
@@ -41,19 +34,31 @@ function MenuToggle() {
 
 export default () => {
     const [ globalState, setGlobalState ] = useGlobalState()
-    const [ state, setState ] = useReducer(reducer, {})
-    
-    function reducer (currentState, newState) {
-      return {...currentState, ...newState}
-    }
-      console.log('state', state)
+    const { 
+        anxiety,
+        bodyImage, 
+        mentalIssue,
+        recentTragedy,
+        tooLittle,
+        tooMuch,
+        onceDay,
+        threeDay,
+        allDay, 
+    } = globalState
+    console.log('state', globalState)
 
-    function PageFour() {
-        const { yes, no} = state
 
-        if(yes || no) {
+    function PageResults() {
+        const { yes, no} = globalState
+
+        if(tooLittle || bodyImage || mentalIssue || threeDay) {
             Router.push("/AboutPage_Anorexia");
-        } else {
+        } else if(tooMuch || anxiety || onceDay || yes) {
+            Router.push("/AboutPage_Binge");
+        } else if( allDay || recentTragedy || no) {
+            Router.push("/AboutPage_Bulimia");
+        }
+        else {
             alert('Please select at least one option!')
         }
     };
@@ -71,16 +76,16 @@ export default () => {
                 text="Are you doing self-induced vomiting?"/>
             </div>
             <div className="answers">
-            <div onClick={() => setState({ yes: !state.yes })}>
+            <div onClick={() => setGlobalState({ yes: !globalState.yes })}>
 
                 <OptionsButton
-                            color={state.yes ? "#5fcc72" : "#FC7753"}
+                            color={globalState.yes ? "#5fcc72" : "#FC7753"}
                 text="Yes"
                 />
             </div>
-            <div onClick={() => setState({ no: !state.no })}>
+            <div onClick={() => setGlobalState({ no: !globalState.no })}>
                 <OptionsButton
-                                color={state.no ? "#5fcc72" : "#FC7753"}
+                                color={globalState.no ? "#5fcc72" : "#FC7753"}
                 text="No"
                 />
             </div>

@@ -38,18 +38,18 @@ function MenuToggle() {
 
 export default ({img}) => {
     const [ globalState, setGlobalState ] = useGlobalState()
-    const [ state, setState ] = useReducer(reducer, {})
+    // const [ state, setState ] = useReducer(reducer, {})
     
-    function reducer (currentState, newState) {
-      return {...currentState, ...newState}
-    }
-      console.log('state', state)
+    // function reducer (currentState, newState) {
+    //   return {...currentState, ...newState}
+    // }
+    //   console.log('state', globalState)
 
     function PageTwo() {
-        const { tooLittle, tooMuch } = state
+        const { tooLittle, tooMuch } = globalState
 
         if(tooLittle || tooMuch) {
-            Router.push("/QuestionPage_2");
+            Router.push("/QuestionPage_2"); 
         } else {
             alert('Please select at least one option!')
         }
@@ -68,15 +68,15 @@ export default ({img}) => {
                 text="Are you eating?"/>
             </div>
             <div className="answers">
-                <div onClick={() => setState({ tooLittle: !state.tooLittle })}>
+                <div onClick={() => setGlobalState({ tooLittle: !globalState.tooLittle })}>
                 <OptionsButton
-                            color={state.tooLittle? "#5fcc72" : "#FC7753"}
+                            color={globalState.tooLittle? "#5fcc72" : "#FC7753"}
                 text="Too Little?"
                 />
                 </div>
-                <div onClick={() => setState({ tooMuch: !state.tooMuch })}>
+                <div onClick={() => setGlobalState({ tooMuch: !globalState.tooMuch })}>
                 <OptionsButton
-                            color={state.tooMuch ? "#5fcc72" : "#FC7753"}
+                            color={globalState.tooMuch ? "#5fcc72" : "#FC7753"}
                 text="Too Much?"
                 />
                 </div>
