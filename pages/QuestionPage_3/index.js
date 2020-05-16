@@ -37,15 +37,11 @@ function MenuToggle() {
 
 export default () => {
     const [ globalState, setGlobalState ] = useGlobalState()
-    const [ state, setState ] = useReducer(reducer, {})
-    
-    function reducer (currentState, newState) {
-      return {...currentState, ...newState}
-    }
-      console.log('state', state)
+
+      console.log('state', globalState)
 
     function PageFour() {
-        const { onceDay, threeDay, allDay } = state
+        const { onceDay, threeDay, allDay } = globalState
 
         if(onceDay || threeDay || allDay) {
             Router.push("/QuestionPage_4");
@@ -68,21 +64,21 @@ export default () => {
             </div>
             <div className="answers">
 
-            <div onClick={() => setState({ onceDay: !state.onceDay })}>
+            <div onClick={() => setGlobalState({ onceDay: !globalState.onceDay })}>
                 <OptionsButton
-                color={state.onceDay ? "#5fcc72" : "#FC7753"}
+                color={globalState.onceDay ? "#5fcc72" : "#FC7753"}
                 text="Once a Day"
                 />
             </div>
-            <div onClick={() => setState({ threeDay: !state.threeDay })}>
+            <div onClick={() => setGlobalState({ threeDay: !globalState.threeDay })}>
                 <OptionsButton
-                color={state.threeDay ? "#5fcc72" : "#FC7753"}
+                color={globalState.threeDay ? "#5fcc72" : "#FC7753"}
                 text="3 times a Day"
                 />
             </div>
-            <div onClick={() => setState({ allDay: !state.allDay })}>
+            <div onClick={() => setGlobalState({ allDay: !globalState.allDay })}>
                 <OptionsButton
-                color={state.allDay ? "#5fcc72" : "#FC7753"}
+                color={globalState.allDay ? "#5fcc72" : "#FC7753"}
                 text="All Day"
                 />
             </div>

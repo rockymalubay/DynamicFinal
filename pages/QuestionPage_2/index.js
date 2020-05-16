@@ -38,15 +38,11 @@ function MenuToggle() {
 
 export default () => {
     const [ globalState, setGlobalState ] = useGlobalState()
-    const [ state, setState ] = useReducer(reducer, {})
-    
-    function reducer (currentState, newState) {
-      return {...currentState, ...newState}
-    }
-      console.log('state', state)
 
-    function pageThree() {
-        const { bodyImage, mentalIssue, anxiety, recentTragedy } = state
+      console.log('state', globalState)
+
+    function PageThree() {
+        const { bodyImage, mentalIssue, anxiety, recentTragedy } = globalState
 
         if(bodyImage || mentalIssue || anxiety || recentTragedy) {
             Router.push("/QuestionPage_3");
@@ -71,29 +67,29 @@ export default () => {
 
             <div 
                 
-                onClick={() => setState({ bodyImage: !state.bodyImage })}
+                onClick={() => setGlobalState({ bodyImage: !globalState.bodyImage })}
             >
                 <OptionsButton 
-                // style={{backgroundColor: state.bodyImage ? "green" : " blue"}}
-                color={state.bodyImage ? "#5fcc72" : "#FC7753"}
+                // style={{backgroundColor: globalState.bodyImage ? "green" : " blue"}}
+                color={globalState.bodyImage ? "#5fcc72" : "#FC7753"}
                 text="Body Image?"
                 />
             </div>
-            <div onClick={() => setState({ mentalIssue: !state.mentalIssue })}>
+            <div onClick={() => setGlobalState({ mentalIssue: !globalState.mentalIssue })}>
                 <OptionsButton
-                color={state.mentalIssue ? "#5fcc72" : "#FC7753"}
+                color={globalState.mentalIssue ? "#5fcc72" : "#FC7753"}
                 text="Mental Issue?"
                 />
             </div>
-            <div onClick={() => setState({ anxiety: !state.anxiety })}>
+            <div onClick={() => setGlobalState({ anxiety: !globalState.anxiety })}>
                 <OptionsButton
-                color={state.anxiety ? "#5fcc72" : "#FC7753"}
+                color={globalState.anxiety ? "#5fcc72" : "#FC7753"}
                 text="Anxiety?"
                 />
             </div>
-            <div onClick={() => setState({ recentTragedy: !state.recentTragedy })}>
+            <div onClick={() => setGlobalState({ recentTragedy: !globalState.recentTragedy })}>
                 <OptionsButton
-                color={state.recentTragedy ? "#5fcc72" : "#FC7753"}
+                color={globalState.recentTragedy ? "#5fcc72" : "#FC7753"}
                 text="Recent Tragedy?"
                 />
             </div>
@@ -107,7 +103,7 @@ export default () => {
                     text="🡠"
                     />
                 </div>
-                <div className="rightArrow" onClick={pageThree}>
+                <div className="rightArrow" onClick={PageThree}>
                     <ArrowButton
                     text="🡢"
                     />
