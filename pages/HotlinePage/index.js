@@ -32,7 +32,7 @@ export default({fontSize}) => {
     
     useEffect(() => {
         setTimeout(()=>{
-            document.querySelector(".pageContainer").style.right= "0%";
+            document.querySelector(".pageContainer").style.opacity= "1";
         }, 50); 
     },[]);
 
